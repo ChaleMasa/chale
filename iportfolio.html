@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatunke Oluwatobiloba Jeremiah</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        /* line-height: 30px; */
+      }
+      .text {
+        color: black;
+        margin-top: 10px;
+      }
+      body {
+        font-size: 17px;
+      }
+      .nav-bar {
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: gray;
+        color: rgb(218, 203, 203);
+        display: flex;
+      }
+      .nav-bar ul {
+        margin-top: 200px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+        justify-content: center;
+      }
+      .nav-bar ul li a {
+        text-decoration: none;
+        color: rgb(230, 216, 216);
+        font-size: 15px;
+        transition: all 0.5;
+      }
+      .nav-bar ul li a:active {
+        color: black;
+      }
+      .nav-bar ul li.active {
+        background-color: white;
+        border-radius: 7px;
+        padding: 10px 50px;
+        color: #040b14;
+        transition: 0.3 ease background-color;
+      }
+      .nav-bar ul li.active a {
+        color: black;
+      }
+      .nav-bar ul li {
+        padding: 10px;
+      }
+      .img-container img {
+        width: 130px;
+        height: 150px;
+        border-radius: 50%;
+        border: 8px solid #2c2f3f;
+      }
+      .img-container {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        flex-direction: column;
+      }
+      .list-items {
+        display: flex;
+        justify-content: space-between;
+      }
+      .list-items ul {
+        list-style-type: none;
+      }
+      .container {
+        margin-left: 320px;
+      }
+
+      .body-container {
+        background-image: url("Hands.jpg");
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+      }
+      .body-text {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        margin-left: 300px;
+        padding: 40px;
+        padding-top: 300px;
+        padding-left: 180px;
+        color: #fff;
+        font-size: 40px;
+        font-family: sans-serif;
+      }
+      .about-img {
+        display: flex;
+        line-height: 30px;
+      }
+      header {
+        margin-top: 50px;
+      }
+      header h2 {
+        color: #173b6c;
+        padding: 20px;
+        font-size: 30px;
+      }
+      hr {
+        width: 60px;
+        margin-left: 20px;
+        background-color: blue;
+        height: 5px;
+      }
+      .container p {
+        line-height: 30px;
+      }
+      .about-second ul {
+        list-style-type: none;
+      }
+      .about-second {
+        padding: 0 40px;
+      }
+      .skils {
+        background-color: whitesmoke;
+        margin-top: 40px;
+        padding-top: 60px;
+      }
+      .skils h2 {
+        padding-left: 20px;
+      }
+
+      .skill-set ul li {
+        padding: 15px;
+      }
+      .skill-set ul {
+        padding-top: 20px;
+      }
+      .progress {
+        width: 350px;
+        height: 8px;
+        background-color: #dce8f8;
+        margin-left: 10px;
+        font-size: 8px;
+      }
+      .progress span {
+        background-color: blue;
+        color: blue;
+      }
+      .summary {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+      }
+      .summary ul li {
+        margin-left: 20px;
+        padding-bottom: 10px;
+      }
+      .resume {
+        padding: 20px;
+        padding-top: 80px;
+      }
+      .resume h2 {
+        padding: 20px;
+      }
+      .resume hr {
+        margin-bottom: 30px;
+      }
+      .resume h3 {
+        margin-left: -20px;
+        padding-bottom: 30px;
+      }
+      .resume h4 {
+        padding-bottom: 30px;
+      }
+      .what-do h2 {
+        padding: 20px;
+      }
+      .what-do hr {
+        margin-bottom: 30px;
+      }
+      .what-do p {
+        padding: 0px 0px 10px 10px;
+      }
+      .what-do h4 {
+        padding: 0px 30px;
+        color: blue;
+      }
+      .what-do span {
+        padding: 20px;
+      }
+      .card-heading h2 {
+        padding: 20px;
+      }
+      .card-heading hr {
+        margin-bottom: 20px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        padding: 20px;
+        margin-top: 20px;
+        width: 50%;
+        box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding-left: 60px;
+      }
+      .card p {
+        padding-bottom: 30px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      section {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body class="bg">
+    <div class="main-container">
+      <div class="nav-bar" id="navbar">
+        <div class="img-container">
+          <img src="./ChaleMasa.jpg" alt="my pics" class="background1" />
+          <h2 class="text">Fatunke Oluwatobiloba Jeremiah</h2>
+        </div>
+        <ul>
+          <li class="home"><a href="#home">Home</a></li>
+          <li class="about"><a href="#about">About</a></li>
+          <li class="skill-set"><a href="#skill-set">Skill Set</a></li>
+          <li class="resume"><a href="#resume">Resume</a></li>
+          <li class="contact"><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+      <section id="home">
+        <div class="body-container">
+          <div class="body-text">
+            <h1 class="header"></h1>
+            <h3>A Web Developer</h3>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section id="about">
+          <header>
+            <h2>About</h2>
+            <hr />
+            <p>
+              Hi, I am Fatunke Oluwatobiloba Jeremiah, my friends call me Benson. <br />
+              I'm a Software Developer willing to go up any length in
+              optimizing, building and developing exceptional, high
+              performance web applications.
+            </p>
+          </header>
+          <div class="about-img">
+            <div class="about-first">
+              <img src="./ChaleMasa.jpg" alt="my image" width="300px" />
+            </div>
+            <div class="about-second">
+              <h1>Web & Software Developer, Computer Engineering.</h1>
+              <p>
+                I am a problem solver, I believe JavaScript and PHP are the
+                future.
+              </p>
+              <ul>
+                <li><strong>Birthday:</strong> 28th of June</li>
+                <li><strong>Phone:</strong> +234(0)702847550, +234(0)9037068075</li>
+                <li><strong>City:</strong> Minna, Niger State</li>
+                <li><strong>Email:</strong> fatunkeoluwatobiloba@gmail.com</li>
+                <li><strong>Freelance:</strong> Avaliable</li>
+              </ul>
+              <p>
+                When a complex obstacle presents itself,I enjoy finding my way
+                around just to get it done with maximum efficiency. I'm happy enough figuring
+                things out in my terminal and get some corrections jotted out
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="skill-set">
+          <div class="skils">
+            <h2>Skills</h2>
+            <hr />
+            <div class="skill-set">
+              <div class="list-items">
+                <ul>
+                  <li>HTML: 100%</li>
+                  <div class="progress">
+                    <span
+                      >bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</span
+                    >
+                  </div>
+                  <li>CSS: 60%</li>
+                  <div class="progress">
+                    <span
+                      >bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</span
+                    >
+                  </div>
+                  <li>JavaScript: 65%</li>
+                  <div class="progress">
+                    <span>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</span>
+                  </div>
+                </ul>
+                <ul>
+                  <li>PHP: 20%</li>
+                  <div class="progress"><span>bbbbbbbbbbbb</span></div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="resume">
+          <div class="resume">
+            <h2>Resume</h2>
+            <hr />
+
+            <div class="summary">
+              <div class="first-summary">
+                <h3>Summary</h3>
+                <h4>FATUNKE OLUWATOBILOBA JEREMIAH</h4>
+                <p>
+                  Innovative and deadline-drivend Developer with <br />less than
+                  a year of experience designing and developing user friendly
+                  and scalable Web.
+                </p>
+                <ul>
+                  <li>8, PEARSE STREET YABA, LAGOS.</li>
+                  <li>(+234)7018475504, (+234)9037068075</li>
+                  <li>fatunkeoluwatobiloba@gmail.com, oluwatobilobabenson20@gmail.com, fatunketheode@yahoo.com</li>
+                </ul>
+              </div>
+              <div class="second-summary">
+                <h3>PROFESSIONAL EXPERIENCE</h3>
+                <h4>SOFTWARE DEVELOPER</h4>
+                <p>2020</p>
+                <em>AI4CE Nigeria Limited,Team Lead on SMESABI, SABIMONEY.</em>
+                <ul>
+                  <li>Student Intern</li>
+                  <li>
+                    Involved in developing Web based Softwares and Learning
+                    Management Systems (LMS) platform
+                  </li>
+                  <li>
+                    Involved in Script & Storyboard Developments for a Module in
+                    the AI4CE LearNergy LMS, SMESABI, SABIMONEY.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h2>Education</h2>
+            <p>Computer Science, CODEL, FUT Minna.</p>
+          </div>
+        </section>
+        <div class="what-do">
+          <h2>what i can do</h2>
+
+          <hr />
+          <p>here are what i can offer</p>
+          <h4><span>web applications</span></h4>
+          <span>Responsive Websites</span>
+        </div>
+        <section id="contact">
+          <div class="card-heading">
+            <h2>Contact</h2>
+            <hr />
+          </div>
+          Here are some of my social links
+          <div class="card">
+            <h3>Email:</h3>
+            
+            <p><a href=""></a>oluwatobilobabenson20@gmail.com</p>
+            
+            <h3>Call:</h3>
+            <p>+2347018475504, +2349037068075.</p>
+            <h3>Facebook:</h3>
+            <p><a href="https://facebook.com/ijoba.travis">Facebook</a></p>
+            <P><a href="https://twitter.com/ChaleMasa">Twitter</a></P>
+            <p><a href="https://www.instagram.com/ayan_loba"></a>Instagram</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const section = document.querySelectorAll("section");
+      const navLi = document.querySelectorAll(".nav-bar ul li");
+      window.addEventListener("scroll", function () {
+        let current = "";
+
+        section.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLi.forEach((li) => {
+          li.classList.remove("active");
+          if (li.classList.contains(current)) {
+            li.classList.add("active");
+          }
+        });
+      });
+    </script>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
